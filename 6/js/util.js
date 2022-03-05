@@ -1,4 +1,14 @@
 // Модуль с вспомогательными функциями.
+const checkCommentLength = 140;
+const countComment = function (userComment) {
+  if (userComment.length <= checkCommentLength) {
+    return true;
+  } else {
+    Error('Максимальное количество символов комментария не более 140');
+    return false;
+  }
+};
+countComment('Комментарий посетителя сайта');
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
